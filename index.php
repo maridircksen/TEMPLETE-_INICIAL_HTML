@@ -1,31 +1,29 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        <?php
-        //Calcular 
-         $x =6;
-         $y = 2;
-         
-         echo '<h2>Cálculo</h2>';
-         echo '<div>' .($x+$y). '</div>';
-         echo '<div>' .($x-$y). '</div>';
-         echo '<div>' .($x*$y). '</div>';
-         echo '<div>' .($x/$y). '</div>';
-         
-        //nome 
-         echo '<br/>';
-         $nome = 'Mariana';
-         $sobrenome = 'Dircksen';
-         
-         echo '<div>'.$nome,' ',$sobrenome.'</div>';
-         
-       
-          
-        ?>
-    </body>
+<?php
+// Definir as tags meta em variáveis PHP
+$titulo = 'Mariana Dircksen';
+$descricao = 'Página Inicial .';
+$palavras_chave = 'exemplo de meta tags em PHP';
+
+$html_meta = '<meta charset="UTF-8">'."\n";
+$html_meta .= '<meta name="description" content="'.$descricao.'">'."\n";
+$html_meta .= '<meta name="keywords" content="'.$palavras_chave.'">'."\n";
+$html_meta .= '<meta name="author" content="Mariana Dircksen">'."\n";
+//N<title>fazer
+//O<?php echo $variavel; 
+
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <?php echo $html_meta; ?>
+    <title><?php echo $titulo; ?></title>
+</head>
+<body>
+    <h1><?php echo $titulo; ?></h1>
+    <p><?php echo $descricao; ?></p>
+    <p>Palavras-chave: <?php echo $palavras_chave; ?></p>
+</body>
 </html>
